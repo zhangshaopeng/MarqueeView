@@ -9,19 +9,30 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ZoomControls;
+
+import com.shaopeng.base.BaseActivity;
+import com.shaopeng.coord.CoordActivity;
+import com.shaopeng.zoom.ZoomActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * Description:
+ * Company:
+ * Author:Zhangshaopeng
+ * Email :1377785991@qq.com
+ * Data:2018/5/25
+ */
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        setTitleText("控件大全");
         final List<String> list = new ArrayList<>();
-
         list.add("热点新闻1");
         list.add("人文趣事2");
         list.add("科幻动画节目3");
@@ -85,5 +96,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void bt(View view) {
         startActivity(new Intent(MainActivity.this, CoordActivity.class));
+    }
+
+    public void qq(View view) {
+        startActivity(new Intent(MainActivity.this, ZoomActivity.class));
     }
 }

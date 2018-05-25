@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shaopeng.zoom.view.PullZoomView
+    android:id="@+id/pzv"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_header"/>
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:tag="content"/>
+    </LinearLayout>
+
+</com.shaopeng.zoom.view.PullZoomView>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shaopeng.zoom.view.PullZoomView
+    android:id="@+id/pzv"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_header"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#A00F"
+            android:tag="content">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:src="@mipmap/header"/>
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="ViewGroup"
+                android:textColor="#FFF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="https://github.com/zhangshaopeng/MarqueeView"
+                android:textColor="#FFF"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</com.shaopeng.zoom.view.PullZoomView>

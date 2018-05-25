@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shaopeng.zoom.view.PullZoomView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pzv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_header" />
+
+        <com.shaopeng.zoom.view.ExpandListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="20dp"
+            android:background="@color/color_WHITE"
+            android:divider="@color/color_WHITE"
+            android:padding="20dp"
+            android:tag="content" />
+    </LinearLayout>
+
+</com.shaopeng.zoom.view.PullZoomView>

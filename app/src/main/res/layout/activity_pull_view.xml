@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shaopeng.zoom.view.PullZoomView
+    android:id="@+id/pzv"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_header"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#A00F"
+            android:gravity="center"
+            android:tag="content"
+            android:text="https://github.com/zhangshaopeng/MarqueeView"
+            android:textColor="#FFF"/>
+    </LinearLayout>
+
+</com.shaopeng.zoom.view.PullZoomView>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shaopeng.base.ScrollViewExtend xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#789"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="拉伸范围"
+                android:textColor="#FFF" />
+
+            <TextView
+                android:id="@+id/tv_sensitive"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="1.5"
+                android:textColor="#FFF" />
+
+            <SeekBar
+                android:id="@+id/sb_sensitive"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#789"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="拉伸时间"
+                android:textColor="#FFF" />
+
+            <TextView
+                android:id="@+id/tv_zoomTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="1.5"
+                android:textColor="#FFF" />
+
+            <SeekBar
+                android:id="@+id/sb_zoomTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#789"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_isParallax"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="添加动画"
+                android:textColor="#FFF" />
+
+            <CheckBox
+                android:id="@+id/cb_isZoomEnable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="是否拉伸"
+                android:textColor="#FFF" />
+        </LinearLayout>
+
+        <com.shaopeng.zoom.view.ExpandListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:tag="content" />
+    </LinearLayout>
+</com.shaopeng.base.ScrollViewExtend>
