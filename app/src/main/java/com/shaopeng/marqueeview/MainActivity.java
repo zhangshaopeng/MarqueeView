@@ -1,8 +1,14 @@
 package com.shaopeng.marqueeview;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.TextPaint;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -91,14 +97,80 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-
+        /**
+         * 富文本textView
+         */
+        TextView textView = (TextView) findViewById(R.id.protocal);
+        textView.setHighlightColor(getResources().getColor(android.R.color.transparent));
+        SpannableString spanableInfo = new SpannableString("这是sdfdfsfdsdsfdf一个测试" + ": " + "点dfasfafsfadsfasfdfaf击我");
+        spanableInfo.setSpan(new Clickable(MainActivity.this, new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "点击成功....", Toast.LENGTH_SHORT).show();
+            }
+        }), 8, 11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spanableInfo.setSpan(new Clickable(MainActivity.this, new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "....", Toast.LENGTH_SHORT).show();
+            }
+        }), 12, 16, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        textView.setText(spanableInfo);
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
+    private View.OnClickListener clickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(MainActivity.this, "点击成功....", Toast.LENGTH_SHORT).show();
+        }
+    };
+
+    /**
+     * 滑动头部实例
+     *
+     * @param view
+     */
     public void bt(View view) {
         startActivity(new Intent(MainActivity.this, CoordActivity.class));
     }
 
+    /**
+     * 伸缩图片实例
+     *
+     * @param view
+     */
     public void qq(View view) {
         startActivity(new Intent(MainActivity.this, ZoomActivity.class));
+    }
+}
+
+
+/**
+ * 对点击事件进行重写，修改字体颜色
+ */
+class Clickable extends ClickableSpan {
+    private Context context;
+    private final View.OnClickListener mListener;
+
+    public Clickable(Context context, View.OnClickListener l) {
+        mListener = l;
+        this.context = context;
+    }
+
+    /**
+     * 重写父类点击事件
+     */
+    @Override
+    public void onClick(View v) {
+        mListener.onClick(v);
+    }
+
+    /**
+     * 重写父类updateDrawState方法  我们可以给TextView设置字体颜色,背景颜色等等...
+     */
+    @Override
+    public void updateDrawState(TextPaint ds) {
+        ds.setColor(context.getResources().getColor(R.color.colorPrimary));
     }
 }
