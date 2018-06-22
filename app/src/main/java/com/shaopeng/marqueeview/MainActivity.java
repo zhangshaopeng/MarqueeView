@@ -2,7 +2,6 @@ package com.shaopeng.marqueeview;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -15,10 +14,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ZoomControls;
 
 import com.shaopeng.base.BaseActivity;
 import com.shaopeng.coord.CoordActivity;
+import com.shaopeng.dialog.DialogActivity;
 import com.shaopeng.zoom.ZoomActivity;
 
 import java.util.ArrayList;
@@ -142,6 +141,10 @@ public class MainActivity extends BaseActivity {
      */
     public void qq(View view) {
         startActivity(new Intent(MainActivity.this, ZoomActivity.class));
+    }
+
+    public void timer(View view) {
+       startActivity(new Intent(MainActivity.this, DialogActivity.class));
     }
 }
 

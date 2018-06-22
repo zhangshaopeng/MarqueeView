@@ -27,4 +27,6 @@ dependencies {
     compile 'com.android.support:cardview-v7:26.1.0'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.github.zhangshaopeng:utilsDemo:v1.1'
+
 }

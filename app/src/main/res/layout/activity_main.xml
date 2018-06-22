@@ -50,4 +50,10 @@
         android:layout_below="@+id/marqueeView"
         android:onClick="qq"
         android:text="仿qq空间bg" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/marqueeView"
+        android:onClick="timer"
+        android:text="弹框" />
 </LinearLayout>

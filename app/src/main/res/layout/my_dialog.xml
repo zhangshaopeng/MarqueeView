@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="265dp"
+    android:layout_height="135dp"
+    android:background="@drawable/radius_rect">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:layout_marginTop="22.5dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:text=""/>
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:layout_below="@+id/title"
+        android:textColor="#fff"
+        android:layout_marginTop="5dp"
+        android:text="请您稍等"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/sure"
+        android:background="#ddd"/>
+    <Button
+        android:id="@+id/sure"
+        android:layout_width="match_parent"
+        android:layout_height="44.5dp"
+        android:background="@null"
+        android:layout_alignParentBottom="true"
+        android:textColor="#fff"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="确定"/>
+</RelativeLayout>
