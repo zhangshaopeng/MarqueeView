@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.shaopeng.base.BaseActivity;
+import com.shaopeng.city.CityListActivity;
 import com.shaopeng.coord.CoordActivity;
 import com.shaopeng.dialog.DialogActivity;
 import com.shaopeng.zoom.ZoomActivity;
@@ -32,10 +33,13 @@ import java.util.List;
  */
 public class MainActivity extends BaseActivity {
 
+    private TextView tvCity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        tvCity = findViewById(R.id.tv_city);
         setTitleText("控件大全");
         final List<String> list = new ArrayList<>();
         list.add("热点新闻1");
@@ -143,11 +147,33 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(MainActivity.this, ZoomActivity.class));
     }
 
+    /**
+     * 弹框dialog案例
+     *
+     * @param view
+     */
     public void timer(View view) {
-       startActivity(new Intent(MainActivity.this, DialogActivity.class));
+        startActivity(new Intent(MainActivity.this, DialogActivity.class));
+    }
+
+    /**
+     * 选择城市列表
+     *
+     * @param view
+     */
+    public void city(View view) {
+        startActivityForResult(new Intent(MainActivity.this, CityListActivity.class), 100);
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 100){
+            tvCity.setText(data.getStringExtra("cityName"));
+        }
     }
 }
-
 
 /**
  * 对点击事件进行重写，修改字体颜色
@@ -175,5 +201,6 @@ class Clickable extends ClickableSpan {
     @Override
     public void updateDrawState(TextPaint ds) {
         ds.setColor(context.getResources().getColor(R.color.colorPrimary));
+
     }
 }

@@ -56,4 +56,11 @@
         android:layout_below="@+id/marqueeView"
         android:onClick="timer"
         android:text="弹框" />
+    <Button
+        android:id="@+id/tv_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/marqueeView"
+        android:onClick="city"
+        android:text="城市选择" />
 </LinearLayout>
