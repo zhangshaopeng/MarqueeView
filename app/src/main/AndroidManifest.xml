@@ -36,6 +36,7 @@
             android:name="com.shaopeng.city.CityListActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name="com.shaopeng.alipay.AliPay"></activity>
     </application>
 
 </manifest>

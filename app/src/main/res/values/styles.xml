@@ -18,8 +18,9 @@
         <!-- 隐藏标题栏 -->
         <item name="windowNoTitle">true</item>
         <!-- 隐藏状态栏 -->
-       <!-- <item name="android:windowFullscreen">true</item>-->
+        <!-- <item name="android:windowFullscreen">true</item>-->
     </style>
+
     <style name="common_dailog" parent="@android:style/Theme.Dialog">
 
         <!-- 边框 -->
@@ -35,8 +36,18 @@
         <!-- 模糊 -->
         <item name="android:backgroundDimEnabled">false</item>
     </style>
+
     <style name="dialog_style" parent="@style/common_dailog">
         <!-- 模糊 -->
         <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <!-- 弹出框动画 由下至上 -->
+    <style name="dialogStyle" parent="android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <!-- 进入时的动画 -->
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+        <!-- 退出时的动画 -->
     </style>
 </resources>

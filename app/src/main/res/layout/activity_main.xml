@@ -41,6 +41,12 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="alipay"
+        android:text="支付宝头部控件效果" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:onClick="bt"
         android:text="沉浸式状态栏" />
 

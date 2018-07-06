@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.shaopeng.alipay.AliPay;
 import com.shaopeng.base.BaseActivity;
 import com.shaopeng.city.CityListActivity;
 import com.shaopeng.coord.CoordActivity;
@@ -157,6 +158,16 @@ public class MainActivity extends BaseActivity {
     }
 
     /**
+     * 仿支付宝头部
+     *
+     * @param view
+     */
+    public void alipay(View view) {
+        startActivity(new Intent(this, AliPay.class));
+    }
+
+
+    /**
      * 选择城市列表
      *
      * @param view
@@ -169,7 +180,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 100){
+        if (requestCode == 100) {
             tvCity.setText(data.getStringExtra("cityName"));
         }
     }

@@ -45,7 +45,9 @@ public class DialogActivity extends AppCompatActivity {
             }
         };
         //s1：内容  s2：右边按钮  s3：左边按钮
-        commonDialog.setText("text1","确定","取消");
+        commonDialog.setText("几年后","确定","取消");
+        commonDialog.setColor(this,R.color.register,R.color.register,R.color.register);
+        commonDialog.setSize(20,20,20);
         commonDialog.showDialog();
 
     }

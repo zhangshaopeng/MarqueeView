@@ -13,7 +13,7 @@
         android:paddingRight="25dp"
         android:text=""
         android:textColor="#000"
-        android:textSize="18sp" />
+        android:textSize="15sp" />
 
     <View
         android:layout_width="match_parent"
@@ -36,8 +36,7 @@
             android:gravity="center"
             android:text="取消"
             android:textColor="#000"
-            android:textSize="17sp"
-            android:textStyle="bold" />
+            android:textSize="17sp" />
         <View
             android:layout_width="0.5dp"
             android:layout_height="match_parent"
@@ -51,8 +50,7 @@
             android:gravity="center"
             android:text="确认"
             android:textColor="#000"
-            android:textSize="17sp"
-            android:textStyle="bold" />
+            android:textSize="17sp" />
     </LinearLayout>
 
 </RelativeLayout>

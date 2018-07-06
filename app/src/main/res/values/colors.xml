@@ -7,7 +7,7 @@
     <color name="color_E6E6E6">#E6E6E6</color>
     <color name="color_WHITE">#FFF</color>
     <color name="color_D5D5D5">#d5d5d5</color>
-    <color name="bottom_font_color">#3F51B5</color>
+    <color name="bottom_font_color">#F9F9F9</color>
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
     <color name="bottom_bg">#fdfbfb</color>
@@ -43,4 +43,7 @@
     <color name="red_default">#f8b181</color>
     <color name="bg_92">#929292</color>
     <color name="bg_c9">#C9C9C9</color>
+    <color name="transparent">#00000000</color>
+    <color name="blue_dark">#1983d1</color>
+    <color name="blue_black">#1673b8</color>
 </resources>
