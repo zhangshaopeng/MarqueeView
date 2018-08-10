@@ -20,6 +20,7 @@ import com.shaopeng.base.BaseActivity;
 import com.shaopeng.city.CityListActivity;
 import com.shaopeng.coord.CoordActivity;
 import com.shaopeng.dialog.DialogActivity;
+import com.shaopeng.seekBar.SeekBarActivity;
 import com.shaopeng.zoom.ZoomActivity;
 
 import java.util.ArrayList;
@@ -183,6 +184,10 @@ public class MainActivity extends BaseActivity {
         if (requestCode == 100) {
             tvCity.setText(data.getStringExtra("cityName"));
         }
+    }
+
+    public void seek(View view) {
+        startActivity(new Intent(this, SeekBarActivity.class));
     }
 }
 
